@@ -1,0 +1,14 @@
+# Creating directories and writing to a configuration file
+
+import os
+
+# Create directories
+os.makedirs("N/.streamlit", exist_ok=True)
+
+# Write to the configuration file
+config_file_path = "N/.streamlit/confia.toml"
+with open(config_file_path, "w") as config_file:
+    config_file.write("[server]\n")
+    config_file.write(f"port = {port}\n")
+    config_file.write(f"enableCORS = {enableCORS}\n")
+    config_file.write(f"headless = {headless}\n")
